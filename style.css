@@ -1102,34 +1102,131 @@ a {
    W. STUDIO — LIGHT THEME
 ================================ */
 
+/* ================================
+   W. STUDIO — COMPLETE LIGHT THEME
+================================ */
+
 body.light-theme {
-  background: #f5f6fa;
-  color: #171923;
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --surface-light: #edf0f6;
+  --text: #171923;
+  --muted: #626777;
+  --border: rgba(23, 25, 35, 0.12);
+
+  background: var(--bg);
+  color: var(--text);
 }
 
-body.light-theme .hero,
-body.light-theme section {
-  color: #171923;
-}
+/* Header */
 
-body.light-theme .site-header,
-body.light-theme header {
+body.light-theme .site-header {
   background: rgba(255, 255, 255, 0.92);
+  border-color: var(--border);
 }
 
-body.light-theme p,
-body.light-theme .description {
+body.light-theme .navigation a:hover {
+  color: #171923;
+}
+
+body.light-theme .header-cta:hover {
+  background: #edf0f6;
+}
+
+/* Hero */
+
+body.light-theme .eyebrow {
   color: #555b68;
 }
 
-body.light-theme .card {
-  background: #ffffff;
-  border-color: #e5e7eb;
+body.light-theme .hero-description,
+body.light-theme .hero-note {
+  color: var(--muted);
 }
 
-body.light-theme footer {
+/* Trust strip */
+
+body.light-theme .trust-strip {
+  border-color: var(--border);
+}
+
+body.light-theme .trust-strip p {
+  color: #252837;
+}
+
+body.light-theme .trust-strip span {
+  color: #626777;
+}
+
+/* General sections */
+
+body.light-theme .section-heading > p,
+body.light-theme .project-info p,
+body.light-theme .service-card p,
+body.light-theme .about-content > p,
+body.light-theme .contact-section > p {
+  color: var(--muted);
+}
+
+body.light-theme .muted {
+  color: #777b89;
+}
+
+/* Service cards */
+
+body.light-theme .service-card {
   background: #ffffff;
+  border-color: var(--border);
+}
+
+body.light-theme .service-card:hover {
+  border-color: rgba(155, 135, 255, 0.65);
+}
+
+/* About section */
+
+body.light-theme .about-section {
+  background:
+    radial-gradient(
+      ellipse at 15% 50%,
+      rgba(155, 135, 255, 0.12),
+      transparent 45%
+    ),
+    #eef0f7;
+  border-color: var(--border);
+}
+
+body.light-theme .about-mark {
+  background: linear-gradient(145deg, #ffffff, #e8e9f5);
+}
+
+/* Contact section */
+
+body.light-theme .contact-section > small {
+  color: #626777;
+}
+
+/* Footer */
+
+body.light-theme .site-footer {
+  border-color: var(--border);
+}
+
+body.light-theme .site-footer > p,
+body.light-theme .site-footer > span {
+  color: #626777;
+}
+
+/* Secondary buttons */
+
+body.light-theme .button-secondary {
   color: #171923;
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body.light-theme .button-secondary:hover {
+  background: #edf0f6;
 }
 
 /* W. STUDIO THEME TOGGLE */
@@ -1179,4 +1276,24 @@ body.light-theme .theme-toggle:hover {
     width: 36px;
     height: 36px;
   }
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #9b87ff;
+  outline-offset: 5px;
+  border-radius: 5px;
+}
+
+/* Smooth interaction feedback */
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
 }
