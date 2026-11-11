@@ -1,0 +1,453 @@
+/* =================================
+   ATELIER HOUSE — CASE STUDY PAGE
+   Designed by W. STUDIO
+================================= */
+
+:root {
+  --background: #f5f2ec;
+  --text: #22211f;
+  --muted: #77736c;
+  --accent: #a58b68;
+  --dark: #25231f;
+  --line: rgba(34, 33, 31, 0.14);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  padding: 28px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: "DM Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.back-link {
+  color: var(--muted);
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+/* GENERAL */
+
+main {
+  overflow: hidden;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* HERO */
+
+.hero {
+  padding: 110px 8% 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 22px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(65px, 11vw, 140px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -6px;
+}
+
+.hero h1 em,
+.story h2 em,
+.contact h2 em {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.intro {
+  max-width: 480px;
+  margin: 25px auto 55px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* HERO ARTWORK */
+
+.hero-art {
+  position: relative;
+  min-height: 420px;
+  margin: 0 auto;
+  max-width: 1050px;
+  background:
+    linear-gradient(rgba(40, 35, 29, 0.12), rgba(40, 35, 29, 0.12)), #d8cdbd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-art::before,
+.hero-art::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.hero-art::before {
+  width: 380px;
+  height: 380px;
+}
+
+.hero-art::after {
+  width: 290px;
+  height: 290px;
+}
+
+.hero-art > span {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  font-family: "Playfair Display", serif;
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+
+.hero-symbol {
+  position: relative;
+  z-index: 1;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(130px, 22vw, 250px);
+  color: #f5f2ec;
+  font-style: italic;
+  line-height: 1;
+}
+
+.hero-art small {
+  position: absolute;
+  bottom: 28px;
+  right: 30px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #51483e;
+}
+
+/* PROJECT DETAILS */
+
+.details {
+  padding: 55px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.details h2 {
+  margin-top: 9px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* STORY */
+
+.story {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 130px 30px;
+  text-align: center;
+}
+
+.story h2 {
+  margin: 25px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 7vw, 78px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.story > p:last-child {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* APPROACH */
+
+.approach {
+  padding: 100px 8%;
+  background: var(--dark);
+  color: #f5f2ec;
+}
+
+.approach > h2 {
+  margin-top: 18px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-top: 70px;
+}
+
+.approach-grid article {
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.approach-grid article span {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.approach-grid h3 {
+  margin: 20px 0 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.approach-grid p {
+  max-width: 260px;
+  color: #aaa69e;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+  padding: 35px 8%;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.disclaimer p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 120px 8%;
+  text-align: center;
+}
+
+.contact h2 {
+  max-width: 750px;
+  margin: 22px auto 35px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 16px 28px;
+  background: var(--dark);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* ACCESSIBILITY */
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 85px;
+  }
+
+  .hero-art {
+    min-height: 330px;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .approach-grid p {
+    max-width: 450px;
+  }
+
+  .story {
+    padding: 95px 8%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .header {
+    padding: 22px 6%;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .back-link {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 75px 6% 55px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .intro {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+
+  .hero-art {
+    min-height: 260px;
+  }
+
+  .hero-art::before {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-art::after {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-art > span {
+    top: 18px;
+    left: 18px;
+    font-size: 10px;
+  }
+
+  .hero-art small {
+    bottom: 18px;
+    right: 18px;
+    font-size: 8px;
+  }
+
+  .details {
+    padding: 40px 7%;
+  }
+
+  .story {
+    padding: 80px 7%;
+  }
+
+  .approach {
+    padding: 80px 7%;
+  }
+
+  .approach-grid {
+    margin-top: 45px;
+  }
+
+  .contact {
+    padding: 85px 7%;
+  }
+
+  footer {
+    padding: 25px 6%;
+    flex-direction: column;
+    text-align: center;
+  }
+}
